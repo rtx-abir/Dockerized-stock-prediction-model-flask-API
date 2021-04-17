@@ -1,0 +1,22 @@
+FROM python:3.7.6
+
+
+WORKDIR /apps
+
+
+COPY ./requirements.txt /apps/requirements.txt
+
+
+RUN python -m pip install --upgrade pip
+RUN pip install -r requirements.txt
+
+
+COPY . /apps
+
+ENV FLASK_APP=app.py
+ENV FLASK_ENV=development
+EXPOSE 5000/tcp
+
+CMD  ["flask", "run", "--host", "0.0.0.0"]
+
+
