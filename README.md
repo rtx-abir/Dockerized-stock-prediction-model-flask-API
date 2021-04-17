@@ -1,10 +1,10 @@
-# flask_api
+# ML Model with Flask API
  A stock prediction model accessible through flask api using a docker file to package it in a container to be able to run in any device
  
  
- # the Docker repository can be found [here](https://hub.docker.com/r/abir2285/stock_prediction_api_container)
+ # The Docker repository can be found [here](https://hub.docker.com/r/abir2285/stock_prediction_api_container)
  
- ## run instructions 
+ ## Run Instructions 
  
   * Once docker is installed in your local machine run the command "docker pull abir2285/stock_prediction_api_container:forpush" to pull from docker-hub
   * Next use the following command to run the image docker run -p 5000:5000 --name flask_api --memory="2g" -d abir2285/stock_prediction_api_container:forpush
